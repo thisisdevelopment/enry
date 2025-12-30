@@ -230,6 +230,7 @@ func printPercents(root string, fSummary map[string][]string, buff *bytes.Buffer
 			val := fileValues[fType]
 			percent := val / total * 100.0
 			results = append(results, map[string]interface{}{
+				mode + "s":   val,
 				"percentage": fmt.Sprintf("%.2f%%", percent),
 				"language":   fType,
 				"color":      enry.GetColor(fType),
